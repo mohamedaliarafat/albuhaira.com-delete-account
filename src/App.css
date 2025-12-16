@@ -1,38 +1,396 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f5f7fa;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, #0c2461 0%, #1e3799 100%);
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(12, 36, 97, 0.15);
+}
+
+.logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+
+.logo-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4a69bd 0%, #1e3799 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logo-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo-subtext {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.logo-title {
+  color: white;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.deletion-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title-section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #0c2461;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.title-line {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, #4a69bd, #1e3799);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Info Card Styles */
+.info-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(12, 36, 97, 0.1);
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border: 1px solid #e8eef7;
+}
+
+.card-header {
+  background: linear-gradient(to right, #0c2461, #1e3799);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;
+}
+
+.card-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.card-content {
+  padding: 2.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.instructions {
+  margin-bottom: 2.5rem;
+}
+
+.instruction-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(to right, #4a69bd, #1e3799);
+  color: white;
+  padding: 1rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(74, 105, 189, 0.3);
+}
+
+.contact-email:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(74, 105, 189, 0.4);
+}
+
+.email-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.email-address {
+  letter-spacing: 0.5px;
+}
+
+.processing-info {
+  display: flex;
+  align-items: center;
+  background-color: #f0f7ff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #4a69bd;
+}
+
+.time-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #4a69bd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;
+  flex-shrink: 0;
+}
+
+.time-icon svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.processing-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0c2461;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  margin-top: 2rem;
+}
+
+.contact-title {
+  font-size: 1.8rem;
+  color: #0c2461;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.contact-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(12, 36, 97, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e8eef7;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(12, 36, 97, 0.15);
+}
+
+.contact-card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contact-card-icon svg {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+.contact-card-icon.email {
+  background: linear-gradient(135deg, #4a69bd 0%, #1e3799 100%);
+}
+
+.contact-card-icon.phone {
+  background: linear-gradient(135deg, #0c2461 0%, #4a69bd 100%);
+}
+
+.contact-card-content h4 {
+  font-size: 1.3rem;
+  color: #0c2461;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contact-card-content p {
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #0c2461;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .card-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    padding: 1.8rem;
+  }
+
+  .contact-email {
+    padding: 0.9rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .logo-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.7rem;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .description,
+  .instruction-text,
+  .processing-text {
+    font-size: 1rem;
+  }
+
+  .contact-email {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .logo-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .logo-subtext {
+    font-size: 0.9rem;
   }
 }
