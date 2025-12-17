@@ -3,7 +3,7 @@ import './App.css';
 
 const App = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:nasser@albuhairaalarabia.com';
+    window.location.href = 'mailto:n.n.66@hotmail.com';
   };
 
   const handlePhoneClick = () => {
@@ -58,7 +58,7 @@ const App = () => {
                       <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                     </svg>
                   </div>
-                  <span className="email-address">nasser@albuhairaalarabia.com</span>
+                  <span className="email-address">n.n.66@hotmail.com</span>
                 </div>
               </div>
               
@@ -85,7 +85,7 @@ const App = () => {
                 </div>
                 <div className="contact-card-content">
                   <h4>Email</h4>
-                  <p>nasser@albuhairaalarabia.com</p>
+                  <p>n.n.66@hotmail.com</p>
                 </div>
               </div>
               
